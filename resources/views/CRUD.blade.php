@@ -58,6 +58,7 @@
         <form id="nuevoUsuarioForm">
             <input type="button" value="ocultar furmulario" onclick="ocultarFormulario()">
             <br><br>
+            
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
             <br><br>
