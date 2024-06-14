@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="stylesheet" href="/css/app.css">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
         /* Opcional: Agrega estilos para el formulario */
         
@@ -20,8 +20,8 @@
 
     </form>
     
-    <section class="DATOS">
-       
+    <section class="DATOS"  >
+       <div class="col-md-8">
         <table class="table table-dark">
             <thead>
                 <tr class="table-primary">
@@ -31,7 +31,7 @@
 
                 </tr>
             </thead>
-        @foreach ($users as $user )
+            @foreach ($users as $user )
             <tbody>
              
               <tr>
@@ -42,29 +42,34 @@
             </tbody>
             @endforeach
           </table>
+
+       </div>
+        
        
     </section>
-    <section>
+    <section class="col-md-4" >
         <form id="mainForm">
             <label for="nuevoUsuario">Ingresa nuevo usuario..!</label>
             <input type="button" value="Abrir Formulario" onclick="mostrarFormulario()">
         </form>
 
-        <input type="button" value="ocultar furmulario" onclick="ocultarFormulario()">
+        
         
         <form id="nuevoUsuarioForm">
+            <input type="button" value="ocultar furmulario" onclick="ocultarFormulario()">
+            <br><br>
             <label for="nombre">Nombre:</label>
             <input type="text" id="nombre" name="nombre" required>
-            <br>
+            <br><br>
             <label for="apellido">Apellido:</label>
             <input type="text" id="apellido" name="apellido" required>
-            <br>
+            <br><br>
             <label for="edad">Edad:</label>
             <input type="number" id="edad" name="edad" required>
-            <br>
+            <br><br>
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" required>
-            <br>
+            <br><br>
             <input type="submit" value="Enviar">
         </form>
     
