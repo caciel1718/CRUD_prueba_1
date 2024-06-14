@@ -40,5 +40,11 @@
           </table>
        
     </section>
+    <section>
+        <form action="">
+            <label for="">Ingresa nuevo usuario..!</label>
+            <input class="btn" type="button" value="submit">
+        </form>
+    </section>
 </body>
 </html>
