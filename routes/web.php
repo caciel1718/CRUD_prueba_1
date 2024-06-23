@@ -21,9 +21,13 @@ Route::get('/', function () {
 
 
 
-
-
-Route::controller(ControllerUser::class)->group(function(){
-
-    Route::get('CRUD','CRUD')->name('CRUD');
+Route::controller(ControllerUser::class)->group(function() {
+    Route::get('CRUD', 'CRUD')->name('CRUD');
+    Route::post('/user/create','create')->name('user.create');
 });
+
+Route::get('/formulario', function () {
+    return view('formulario');
+});
+
+
